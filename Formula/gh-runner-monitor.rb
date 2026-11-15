@@ -5,23 +5,23 @@
 class GhRunnerMonitor < Formula
   desc "Terminal monitor for GitHub Actions self-hosted runners and queued jobs"
   homepage "https://github.com/alexso/gh-runner-monitor"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   depends_on "gh"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/alexso/gh-runner-monitor/releases/download/v1.0.0/gh-runner-monitor_1.0.0_darwin_amd64.tar.gz"
-      sha256 "95d5bcbfbaddf7de888612054fc85e28dc75ef02b8ba3088ef7249a289c1c1b2"
+      url "https://github.com/alexso/gh-runner-monitor/releases/download/v1.1.0/gh-runner-monitor_1.1.0_darwin_amd64.tar.gz"
+      sha256 "9e8b89e63d0bfbaf311a4fc7a892b3f4f70f73ab37f5de57cf7e0efb29ceb2b4"
 
       define_method(:install) do
         bin.install "gh-runner-monitor"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/alexso/gh-runner-monitor/releases/download/v1.0.0/gh-runner-monitor_1.0.0_darwin_arm64.tar.gz"
-      sha256 "70f977e7ba3f447826972a8cd9441e9a16183e374f081bc24aca5d31d2069aeb"
+      url "https://github.com/alexso/gh-runner-monitor/releases/download/v1.1.0/gh-runner-monitor_1.1.0_darwin_arm64.tar.gz"
+      sha256 "0e56b1f42575d3a5cb3b10ad3b7c46ebffb9bef47228579053f10a6f4a11624e"
 
       define_method(:install) do
         bin.install "gh-runner-monitor"
@@ -31,15 +31,15 @@ class GhRunnerMonitor < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alexso/gh-runner-monitor/releases/download/v1.0.0/gh-runner-monitor_1.0.0_linux_amd64.tar.gz"
-      sha256 "85378f7bbfb3dbe8d41304b2c68e81302b35b87d49af271780b343da4c82b2fc"
+      url "https://github.com/alexso/gh-runner-monitor/releases/download/v1.1.0/gh-runner-monitor_1.1.0_linux_amd64.tar.gz"
+      sha256 "017db3503fc3c2be8411d23c81cbf3cba8a70ca51d5f19d93564ecb985ba8d08"
       define_method(:install) do
         bin.install "gh-runner-monitor"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alexso/gh-runner-monitor/releases/download/v1.0.0/gh-runner-monitor_1.0.0_linux_arm64.tar.gz"
-      sha256 "181eee8a2fb69129368436f2ff0495a9a13e7be1428bc6794fa6667c42f7b1c0"
+      url "https://github.com/alexso/gh-runner-monitor/releases/download/v1.1.0/gh-runner-monitor_1.1.0_linux_arm64.tar.gz"
+      sha256 "25cc39eae114a5e4a067e346b9337ff66402c22d52891c51016e0cd51036f3f3"
       define_method(:install) do
         bin.install "gh-runner-monitor"
       end
